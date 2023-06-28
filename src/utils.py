@@ -15,6 +15,7 @@ def save_object(file_path, obj):
         os.makedirs(dir_path, exist_ok=True)
         with open(file_path, "wb") as file_obj:  
             pickle.dump(obj, file_obj)
+            logging.info(f'The object has been saved')
     except Exception as e:
         logging.info("An error has occurred while saving the object")
         raise CustomException(e, sys)
@@ -22,6 +23,7 @@ def save_object(file_path, obj):
 
 def evaluate_model(x_train,y_train,y_test,x_test,models,param):
     try:
+        logging.info("Evalutating models")
         report = {}
 
         for i in range(len(list(models))):
@@ -45,6 +47,7 @@ def evaluate_model(x_train,y_train,y_test,x_test,models,param):
             test_model_score = r2_score(y_test, y_test_pred)
 
             report[list(models.keys())[i]] = test_model_score
+            logging.info(f'The {model} model has score of {test_model_score}')
 
         return report
     except Exception as e:
@@ -54,7 +57,10 @@ def evaluate_model(x_train,y_train,y_test,x_test,models,param):
 
 def load_object(file_path):
     try:
-        with open(file_path) as file_obj:
-            return pickle.load(file_obj)
+        with open(file_path,"rb") as file_obj:
+            loaded_obj = pickle.load(file_obj)
+            logging.info('Loaded the object')
+            return loaded_obj
     except Exception as e:
         logging.info("An error as occured while loading the pickle object")
+        raise CustomException(e,sys)

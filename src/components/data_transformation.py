@@ -15,7 +15,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join(os.getcwd(),"artifacts","preprocessor.pkl")
+    preprocessor_obj_file_path = os.path.join("artifacts","preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):
@@ -42,7 +42,7 @@ class DataTransformation:
             cat_pipeline=Pipeline(
                 steps=[
                     ('imputer',SimpleImputer(strategy='most_frequent')),
-                    ('one_hot_encoder',OneHotEncoder(sparse_output=False)),
+                    ('one_hot_encoder',OneHotEncoder()),
                     ('Scalar',StandardScaler())
                 ]
             )

@@ -11,13 +11,19 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            preprocessor_path=os.path.join('../../','artifacts','preprocessor.pkl')
-            model_path=os.path.join('../../','artifacts','model.pkl')
+            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
+            model_path=os.path.join('artifacts','model.pkl')
+            preprocessor_path = preprocessor_path.replace("\\",'/')
+            model_path = model_path.replace('\\','/')
 
+            logging.info('Loading of objects initiated')
             preprocessor=load_object(preprocessor_path)
+            logging.info('Loaded preporcessor object')
             model=load_object(model_path)
+            logging.info('Loaded the model object')
 
             data_scaled=preprocessor.transform(features)
+            # data_arr = features.to_numpy()
 
             pred=model.predict(data_scaled)
             return pred
