@@ -17,6 +17,10 @@ def home_page():
 def about_page():
     return render_template('about.html')
 
+@app.route('/documentation')
+def doc_page():
+    return render_template('documnetation.html')
+
 @app.route('/predict',methods=['GET','POST'])
 
 def predict_datapoint():
