@@ -2,7 +2,7 @@ pandas
 numpy
 flask
 seaborn
-scikit-learn
+scikit-learn==1.2.2
 gunicorn
 
 
