@@ -4,6 +4,6 @@ flask
 seaborn
 scikit-learn==1.2.2
 gunicorn
-
+cassandra-driver
 
 -e .
