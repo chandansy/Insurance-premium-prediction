@@ -1,5 +1,6 @@
 
 # Insurance Premium Prediction Web App
+<img src="https://drive.google.com/file/d/11lve-0v3545mPYPWHIXDn0BTrmGhlI_V/view?usp=sharing" width="128"/>
 
 The goal of this project is to give people an estimate of how much they need based on
 their individual health situation. After that, customers can work with any health
@@ -7,9 +8,13 @@ insurance carrier and its plans and perks while keeping the projected cost from 
 study in mind. 
 
 
+[DEMO LINK](https://insurance-premium-prediction-rx8c.onrender.com)
+
+
+
 ## Documentation
 
-[Documentation]([https://drive.google.com/file/d/1PUCqVKy21vtuKOYiBDhYJTUIa-7EP75g/view](https://drive.google.com/drive/folders/1hcE3rKxjZQdEeFZjZHe4UM8q-_NrW2vM?usp=sharing))
+[Documentation](https://drive.google.com/drive/folders/1hcE3rKxjZQdEeFZjZHe4UM8q-_NrW2vM?usp=sharing)
 
 
 ## Virtual env and Git
@@ -62,8 +67,6 @@ Start the server
 
 - [@deftdev](https://github.com/deftydev)
 - [@chandansy](https://github.com/chandansy?tab=repositories)
-- [@neha](https://github.com/chandansy?tab=repositories)
-
 
 ## 🚀 About US
 Aspring Data scientists
